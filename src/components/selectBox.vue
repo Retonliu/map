@@ -2,10 +2,13 @@
     <div id="selectBox">
         <div class="wrap">
             <input type="text" :placeholder="text" readonly="readonly">
-            <span class="iconfont icon-down" @click="isShow = !isShow"></span>
+            <span class="iconfont icon-Down" @click="isShow = !isShow"></span>
         </div>
-        <ul v-show="isShow" @click="setChecked">
-            <li v-for="item in list" :key="item.index">{{ item[text] }}</li>
+        <ul v-show="isShow">
+            <li v-for="(item, index) in list" :key="item[text]" @click="setChecked(index)">
+                {{ item[text] }}
+                <span class="iconfont icon-finish" v-show="checkedList[index]===true"></span>
+            </li>
         </ul>
     </div>
 </template>
@@ -17,21 +20,25 @@ export default {
     data() {
         return {
             isShow: false,
-            content: this.text
+            content: this.text,
+            checkedList: [],
         }
     },
     methods: {
-        setChecked() {
-
+        setChecked(index) {
+            this.$set(this.checkedList, index, !this.checkedList[index]) //this.checkedList[index] = true
         }
     },
     mounted() {
-        //console.log(this.list);
     }
 }
 </script>
 
 <style scoped>
+.icon-finish {
+    position: absolute;
+    right: 20px;
+}
 #selectBox {
     display: inline-block;
     margin: 0 4px;
@@ -58,12 +65,13 @@ ul {
     margin-top: 0;
     height: 120px;
     width: 260px;
-    background-color: #F5F5F5;
+    background-color: #FFFAFA;
 }
 ul li {
-    border-bottom: solid 1px #000000;
-    font-size: 15px;
-    color: #8888;
+    margin-bottom: 4px;
+    text-align: center;
+    font-size: 20px;
     list-style: none;
+    cursor: pointer;
 }
 </style>
