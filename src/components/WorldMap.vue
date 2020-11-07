@@ -26,7 +26,7 @@ export default {
                         res.push({
                             name: that.data[i].area,
                             value: geoCoord.concat(that.data[i].length),
-                            symbolOffset: [Math.floor((Math.random()*200)+1)+'%', Math.floor((Math.random()*200)+1)+'%'],
+                            symbolOffset: [Math.floor((Math.random()*80)+1)+'%', Math.floor((Math.random()*80)+1)+'%'],
                         });
                     }
                 }
@@ -38,13 +38,13 @@ export default {
             let res = [];
             let that = this;
             for (let i = 0; i < this.data.length; i++) {
-                if (this.data[i].host === '') {
+                if (this.data[i].host === 'Anas acuta') {
                     let geoCoord = this.geoCoorMap[this.data[i].area];
                     if (geoCoord) {
                         res.push({
                             name: that.data[i].area,
                             value: geoCoord.concat(that.data[i].length),
-                            symbolOffset: [Math.floor((Math.random()*200)+1)+'%', Math.floor((Math.random()*200)+1)+'%'],
+                            symbolOffset: [Math.floor((Math.random()*80)+1)+'%', Math.floor((Math.random()*80)+1)+'%'],
                         });
                     }
                 }
@@ -56,13 +56,13 @@ export default {
             let res = [];
             let that = this;
             for (let i = 0; i < this.data.length; i++) {
-                if (this.data[i].host === 'c') {
+                if (this.data[i].host === 'Anas crecca') {
                     let geoCoord = this.geoCoorMap[this.data[i].area];
                     if (geoCoord) {
                         res.push({
                             name: that.data[i].area,
                             value: geoCoord.concat(that.data[i].length),
-                            symbolOffset: [Math.floor((Math.random()*200)+1)+'%', Math.floor((Math.random()*200)+1)+'%'],
+                            symbolOffset: [Math.floor((Math.random()*80)+1)+'%', Math.floor((Math.random()*80)+1)+'%'],
                         });
                     }
                 }
@@ -101,10 +101,10 @@ export default {
                 },
                 geo: {
                     map: 'world',
-                    roam: true,
+                    roam: false,
                     top: 120,
                     left: 30,
-                    zoom: 1,
+                    zoom: 1.5,
 
                     itemStyle: {
                         normal: {
@@ -208,10 +208,6 @@ export default {
         }
     },
     mounted() {
-        /*
-        this.$axios("url")
-         .get()
-        */
         this.myChart = echarts.init(this.$refs.worldmap);
         this.initMap();
     },

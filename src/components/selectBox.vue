@@ -5,7 +5,7 @@
             <span class="iconfont icon-Down" @click="isShow = !isShow"></span>
         </div>
         <ul v-show="isShow">
-            <li v-for="(item, index) in list" :key="item[text]" @click="setChecked(index)">
+            <li v-for="(item, index) in list" :key="item[text]" @click="handleChecked(index)">
                 {{ item[text] }}
                 <span class="iconfont icon-finish" v-show="checkedList[index]===true"></span>
             </li>
@@ -24,9 +24,22 @@ export default {
             checkedList: [],
         }
     },
+    computed: {
+        collectChecked() {
+            let that = this;
+            //console.log(this.list);
+            return this.list.filter((item, index) => that.checkedList[index]);
+        }
+    },
     methods: {
         setChecked(index) {
             this.$set(this.checkedList, index, !this.checkedList[index]) //this.checkedList[index] = true
+        },
+        handleChecked(index) {
+            let that = this;
+            this.setChecked(index);
+            this.$emit('handleList', that.collectChecked);
+            //console.log(that.collectChecked);
         }
     },
     mounted() {
@@ -41,7 +54,7 @@ export default {
 }
 #selectBox {
     display: inline-block;
-    margin: 0 4px;
+    margin: 0 10px;
 }
 .wrap {
     display: inline-block;
