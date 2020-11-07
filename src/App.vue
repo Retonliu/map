@@ -284,9 +284,24 @@ export default {
             return this.data.filter((arr) => !res.has(arr.species) && res.set(arr.species, 1))
         },
         filterData() {
-            let res = [];
-            let bT = new Date(this.beginTime.replace("-", "/"));
-            let eT = new Date(this.endTime.replace("-", "/"));
+            // 对多选框的内容进行过滤得到res4数组
+            let res = this.data.filter((item1) => genus.some((item2) => item1.genus===item2.genus))
+                .filter((item1) => host.some((item2) => item1.host === item2.host))
+                .filter((item1) => species.some((item2) => item1.species === item2.species))
+                .filter((item1) => tissue.some((item2) => item1.tissue === item2.tissue))
+                .filter((item) => item.accession===aeecssion)
+                .filter((item) => this.minLen <= item.length && item.length <= this.maxLen),
+                bT = new Date(this.beginTime.replace("-", "/")),
+                eT = new Date(this.endTime.replace("-", "/"));
+            
+            res = res.filter(function(item) {
+                let time = item.time.toString();
+                let curT = time.slice(0, 4) + '/' + time.slice(4, 6) + '/' + time.slice(6, 8);
+                let cT = new Date(curT);
+                return bT <= cT && cT <= eT;
+            });
+
+            /*let res = [];
             for (let i = 0; i < this.data.length; i++) { //双重循环判断
                 //判断是否有host
                 for (let j = 0; j < this.host.length; j++) { 
@@ -321,7 +336,7 @@ export default {
                     }
                 }
 
-            }
+            }*/
             //console.log(res);
             return res;
       }
