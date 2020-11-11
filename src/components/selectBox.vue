@@ -7,7 +7,7 @@
         <ul v-show="isShow">
             <li v-for="(item, index) in list" :key="item[text]" @click="handleChecked(index)">
                 {{ item[text] }}
-                <span class="iconfont icon-finish" v-show="checkedList[index]===true"></span>
+                <span class="iconfont icon-finish" v-show="checkedList[index]"></span>
             </li>
         </ul>
     </div>
@@ -21,28 +21,33 @@ export default {
         return {
             isShow: false,
             content: this.text,
-            checkedList: [],
+            //dataMap: new Map()
+            checkedList: []
         }
     },
     computed: {
         collectChecked() {
+            //每次都要进行计算，影响性能
+            let res = [];
             let that = this;
-            //console.log(this.list);
-            return this.list.filter((item, index) => that.checkedList[index]);
+            res = this.list.filter((item, index) => that.checkedList[index]);
+            return res;
         }
     },
     methods: {
         setChecked(index) {
+            /*let value = this.dataMap.get(obj);
+            this.dataMap.set(obj, !value);*/
             this.$set(this.checkedList, index, !this.checkedList[index]) //this.checkedList[index] = true
+            
         },
         handleChecked(index) {
+            //console.log(this.dataMap.get(obj) === true);
             let that = this;
             this.setChecked(index);
             this.$emit('handleList', that.collectChecked);
             //console.log(that.collectChecked);
         }
-    },
-    mounted() {
     }
 }
 </script>
@@ -86,5 +91,9 @@ ul li {
     font-size: 20px;
     list-style: none;
     cursor: pointer;
+}
+li:hover {
+    color: #fff;
+    background-color: #97FFFF;
 }
 </style>

@@ -30,9 +30,10 @@
                     最大长度
                     <input type="number" min="0" max="1000" v-model="maxLen">
                 </label>
+                <button @click="filterData" style="margin-left: 4px;">显示</button>
             </div>
         </div>
-        <world-map v-bind:data="filterData" style="margin-top: 100px;"></world-map>
+        <world-map v-bind:data="selectData" style="margin-top: 100px;" ref="map"></world-map>
     </div>
 </template>
 
@@ -40,254 +41,294 @@
 import WorldMap from './components/WorldMap.vue'
 import selectBox from './components/selectBox.vue'
 export default {
-  name: 'MapContainer',
-  components: {
-    WorldMap,
-    selectBox
-  },
-  data() {
-    return {
-        genus: [],
-        species: [],
-        tissue: [],
-        host: [],
-        area: [],
-        accession: '',
-        beginTime: '',
-        endTime: '',
-        minLen: 0,
-        maxLen: 0,
-        ifShow: false,
-        tipMsg: '查无输入accession',
-        data: [
-            {
-                genus: "Deltacoronarirus",
-                species: "Deltacoronavirus B04",
-                host: "AmaZona vinacea",
-                tissue: "feces",
-                length: 200,
-                time: "2020-09-27",
-                area: "Poland",
-                accession: "KP965434",
+    name: 'MapContainer',
+    components: {
+        WorldMap,
+        selectBox
+    },
+    data() {
+        return {
+            genus: [],
+            species: [],
+            tissue: [],
+            host: [],
+            area: [],
+            accession: '',
+            beginTime: '',
+            endTime: '',
+            minLen: 0,
+            maxLen: 0,
+            ifShow: false,
+            tipMsg: '查无输入accession',
+            selectData: [],
+            data: [
+                {
+                    genus: "Deltacoronarirus",
+                    species: "Deltacoronavirus B04",
+                    host: "AmaZona vinacea",
+                    tissue: "feces",
+                    length: 200,
+                    time: "2020-09-27",
+                    area: "Poland",
+                    accession: "KU251481",
+                },
+                {
+                    genus: "Gammacoronavirus",
+                    species: "Deltacoronavirus B04",
+                    host: "AmaZona vinacea",
+                    tissue: "feces",
+                    length: 600,
+                    time: "2020-09-27",
+                    area: "China",
+                    accession: "KU251481",
+                },
+                {
+                    genus: "Gammacoronavirus",
+                    species: "Deltacoronavirus B04",
+                    host: "AmaZona vinacea",
+                    tissue: "feces",
+                    length: 800,
+                    time: "2020-09-27",
+                    area: "China",
+                    accession: "KU251481",
+                },
+                {
+                    genus: "Gammacoronavirus",
+                    species: "Deltacoronavirus B04",
+                    host: "AmaZona vinacea",
+                    tissue: "feces",
+                    length: 900,
+                    time: "2020-09-27",
+                    area: "China",
+                    accession: "KU251481",
+                },
+                {
+                    genus: "Deltacoronarirus",
+                    species: "Deltacoronavirus",
+                    host: "Anas acuta",
+                    tissue: "feces",
+                    length: 800,
+                    time: "2020-09-27",
+                    area: "China",
+                    accession: "KU251481",
+                },
+                {
+                    genus: "Deltacoronarirus",
+                    species: "Deltacoronavirus",
+                    host: "Anas acuta",
+                    tissue: "feces",
+                    length: 600,
+                    time: "2020-09-27",
+                    area: "China",
+                    accession: "KU251481",
+                },
+                {
+                    genus: "Deltacoronarirus",
+                    species: "Deltacoronavirus",
+                    host: "AmaZona vinacea",
+                    tissue: "lung",
+                    length: 130,
+                    time: "2020-09-27",
+                    area: "Vietnam",
+                    accession: "KU251481"
+                },
+                {
+                    genus: "Deltacoronarirus",
+                    species: "Deltacoronavirus",
+                    host: "AmaZona vinacea",
+                    tissue: "feces",
+                    length: 130,
+                    time: "2020-09-27",
+                    area: "China",
+                    accession: "KU251481",
+                },
+                {
+                    genus: "Deltacoronarirus",
+                    species: "Deltacoronavirus",
+                    host: "Anas acuta",
+                    tissue: "lung",
+                    length: 230,
+                    time: "2020-09-26",
+                    area: "Japan",
+                    accession: "KU251481"
+                },
+                {
+                    genus: "Deltacoronarirus",
+                    species: "Deltacoronavirus",
+                    host: "Anas acuta",
+                    tissue: "lung",
+                    length: 130,
+                    time: "2020-09-26",
+                    area: "Korea",
+                    accession: "KU251481",
+                },
+                {
+                    genus: "Deltacoronarirus",
+                    species: "Deltacoronavirus",
+                    host: "Anas crecca",
+                    tissue: "lung",
+                    length: 930,
+                    time: "2020-09-26",
+                    area: "Canada",
+                    accession: "KU251481",
+                },
+                {
+                    genus: "Deltacoronarirus",
+                    species: "Deltacoronavirus",
+                    host: "AmaZona vinacea",
+                    tissue: "lung",
+                    length: 30,
+                    time: "2020-09-26",
+                    area: "Canada",
+                    accession: "KU251481",
+                },
+                {
+                    genus: "Gammacoronavirus",
+                    species: "Deltacoronavirus",
+                    host: "Anas crecca",
+                    tissue: "lung",
+                    length: 930,
+                    time: "2020-09-26",
+                    area: "Canada",
+                    accession: "KU251481",
+                },
+                {
+                    genus: "Gammacoronavirus",
+                    species: "Deltacoronavirus",
+                    host: "AmaZona vinacea",
+                    tissue: "lung",
+                    length: 1000,
+                    time: "2020-09-26",
+                    area: "Canada",
+                    accession: "KU251481",
+                },
+                {
+                    genus: "Gammacoronavirus",
+                    species: "Deltacoronavirus",
+                    host: "Anas crecca",
+                    tissue: "lung",
+                    length: 30,
+                    time: "2020-09-26",
+                    area: "Russia",
+                    accession: "KU251481",  
+                },
+                {
+                    genus: "Gammacoronavirus",
+                    species: "Deltacoronavirus",
+                    host: "AmaZona vinacea",
+                    tissue: "lung",
+                    length: 930,
+                    time: "2020-09-26",
+                    area: "Russia",
+                    accession: "KU251481",
+                },
+                {
+                    genus: "Gammacoronavirus",
+                    species: "Deltacoronavirus",
+                    host: "Anas crecca",
+                    tissue: "lung",
+                    length: 500,
+                    time: "2020-09-26",
+                    area: "Australia",
+                    accession: "KU251481",
+                },
+                {
+                    genus: "Gammacoronavirus",
+                    species: "Deltacoronavirus",
+                    host: "AmaZona vinacea",
+                    tissue: "lung",
+                    length: 900,
+                    time: "2020-09-26",
+                    area: "Australia",
+                    accession: "KU251481",  
+                },
+                {
+                    genus: "Gammacoronavirus",
+                    species: "Deltacoronavirus",
+                    host: "Anas crecca",
+                    tissue: "lung",
+                    length: 500,
+                    time: "2020-09-26",
+                    area: "Australia",
+                    accession: "KU251481",  
+                },
+                {
+                    genus: "Gammacoronavirus",
+                    species: "Deltacoronavirus",
+                    host: "Anas crecca",
+                    tissue: "lung",
+                    length: 500,
+                    time: "2020-09-26",
+                    area: "Turkey",
+                    accession: "KU251481",  
+                },
+                {
+                    genus: "Gammacoronavirus",
+                    species: "Deltacoronavirus",
+                    host: "Anas crecca",
+                    tissue: "lung",
+                    length: 400,
+                    time: "2020-09-26",
+                    area: "Turkey",
+                    accession: "KU251481",  
+                }
+            ]
+            }
+    },
+    computed: {
+            getGenus() {
+                const res = new Map();
+                return this.data.filter((arr) => !res.has(arr.genus) && res.set(arr.genus, 1))
             },
-            {
-                genus: "Gammacoronavirus",
-                species: "Deltacoronavirus B04",
-                host: "AmaZona vinacea",
-                tissue: "feces",
-                length: 600,
-                time: "2020-09-27",
-                area: "China",
-                accession: "KP965434",
+            getArea() {
+                const res = new Map();
+                return this.data.filter((arr) => !res.has(arr.area) && res.set(arr.area, 1))
             },
-            {
-                genus: "Gammacoronavirus",
-                species: "Deltacoronavirus B04",
-                host: "AmaZona vinacea",
-                tissue: "feces",
-                length: 800,
-                time: "2020-09-27",
-                area: "China",
-                accession: "KP965434",
+            getHost() {
+                const res = new Map();
+                return this.data.filter((arr) => !res.has(arr.host) && res.set(arr.host, 1))
             },
-            {
-                genus: "Gammacoronavirus",
-                species: "Deltacoronavirus B04",
-                host: "AmaZona vinacea",
-                tissue: "feces",
-                length: 900,
-                time: "2020-09-27",
-                area: "China",
-                accession: "KP965434",
+            getSpecies() {
+                const res = new Map();
+                return this.data.filter((arr) => !res.has(arr.species) && res.set(arr.species, 1))
             },
-            {
-                genus: "Deltacoronarirus",
-                species: "Deltacoronavirus",
-                host: "Anas acuta",
-                tissue: "feces",
-                length: 800,
-                time: "2020-09-27",
-                area: "China",
-                accession: "KP965434",
-            },
-            {
-                genus: "Deltacoronarirus",
-                species: "Deltacoronavirus",
-                host: "Anas acuta",
-                tissue: "feces",
-                length: 600,
-                time: "2020-09-27",
-                area: "China",
-                accession: "KP965434",
-            },
-            {
-                genus: "Deltacoronarirus",
-                species: "Deltacoronavirus",
-                host: "AmaZona vinacea",
-                tissue: "lung",
-                length: 130,
-                time: "2020-09-27",
-                area: "Vietnam",
-                accession: "GU396668"
-            },
-            {
-                genus: "Deltacoronarirus",
-                species: "Deltacoronavirus",
-                host: "AmaZona vinacea",
-                tissue: "feces",
-                length: 130,
-                time: "2020-09-27",
-                area: "China",
-                accession: "KP965434",
-            },
-            {
-                genus: "Deltacoronarirus",
-                species: "Deltacoronavirus",
-                host: "Anas acuta",
-                tissue: "lung",
-                length: 230,
-                time: "2020-09-26",
-                area: "Japan",
-                accession: "KP256820"
-            },
-            {
-                genus: "Deltacoronarirus",
-                species: "Deltacoronavirus",
-                host: "Anas acuta",
-                tissue: "",
-                length: 130,
-                time: "2020-09-26",
-                area: "Korea",
-                accession: "GU396670",
-            },
-            {
-                genus: "Deltacoronarirus",
-                species: "Deltacoronavirus",
-                host: "Anas crecca",
-                tissue: "",
-                length: 930,
-                time: "2020-09-26",
-                area: "Canada",
-                accession: "GU396672",
-            },
-            {
-                genus: "Deltacoronarirus",
-                species: "Deltacoronavirus",
-                host: "AmaZona vinacea",
-                tissue: "",
-                length: 30,
-                time: "2020-09-26",
-                area: "Canada",
-                accession: "GU396673",
-            },
-            {
-                genus: "Gammacoronavirus",
-                species: "Deltacoronavirus",
-                host: "Anas crecca",
-                tissue: "",
-                length: 930,
-                time: "2020-09-26",
-                area: "Canada",
-                accession: "KU251478",
-            },
-            {
-                genus: "Gammacoronavirus",
-                species: "Deltacoronavirus",
-                host: "AmaZona vinacea",
-                tissue: "",
-                length: 1000,
-                time: "2020-09-26",
-                area: "Canada",
-                accession: "KU251479",
-            },
-            {
-                genus: "Gammacoronavirus",
-                species: "Deltacoronavirus",
-                host: "Anas crecca",
-                tissue: "",
-                length: 30,
-                time: "2020-09-26",
-                area: "Russia",
-                accession: "KU251480",  
-            },
-            {
-                genus: "Gammacoronavirus",
-                species: "Deltacoronavirus",
-                host: "AmaZona vinacea",
-                tissue: "",
-                length: 930,
-                time: "2020-09-26",
-                area: "Russia",
-                accession: "KU251481",
-            },
-            {
-                genus: "Gammacoronavirus",
-                species: "Deltacoronavirus",
-                host: "Anas crecca",
-                tissue: "",
-                length: 500,
-                time: "2020-09-26",
-                area: "Australia",
-                accession: "KU251481",
-            },
-            {
-                genus: "Gammacoronavirus",
-                species: "Deltacoronavirus",
-                host: "AmaZona vinacea",
-                tissue: "",
-                length: 900,
-                time: "2020-09-26",
-                area: "Australia",
-                accession: "KU251481",  
-            },
-            {
-                genus: "Gammacoronavirus",
-                species: "Deltacoronavirus",
-                host: "Anas crecca",
-                tissue: "",
-                length: 500,
-                time: "2020-09-26",
-                area: "Australia",
-                accession: "KU251481",  
-            },
-            {
-                genus: "Gammacoronavirus",
-                species: "Deltacoronavirus",
-                host: "Anas crecca",
-                tissue: "",
-                length: 500,
-                time: "2020-09-26",
-                area: "Turkey",
-                accession: "KU251481",  
-            },
-        ]
-            
-        }
-  },
-  computed: {
-        getGenus() {
-            const res = new Map();
-            return this.data.filter((arr) => !res.has(arr.genus) && res.set(arr.genus, 1))
+            getTissue() {
+                const res = new Map();
+                return this.data.filter((arr) => !res.has(arr.tissue) && res.set(arr.tissue, 1))
+            }
+    },
+    methods: {
+        setGenus(genus) {
+            this.genus = genus;
+            //console.log(this.genus);
         },
-        getArea() {
-            const res = new Map();
-            return this.data.filter((arr) => !res.has(arr.area) && res.set(arr.area, 1))
+        setTissue(tissue) {
+            this.tissue = tissue;
         },
-        getHost() {
-            const res = new Map();
-            return this.data.filter((arr) => !res.has(arr.host) && res.set(arr.host, 1))
+        setHost(host) {
+            this.host = host;
         },
-        getArea() {
-            const res = new Map();
-            return this.data.filter((arr) => !res.has(arr.area) && res.set(arr.area, 1))
+        setArea(area) {
+            this.area = area;
         },
-        getSpecies() {
-            const res = new Map();
-            return this.data.filter((arr) => !res.has(arr.species) && res.set(arr.species, 1))
+        setSpecies(species) {
+            this.species = species;
         },
-        getTissue() {
-            const res = new Map();
-            return this.data.filter((arr) => !res.has(arr.tissue) && res.set(arr.tissue, 1))
+        validateThings() {
+            //console.log(this.ifShow);
+            let flag = false;
+            for (let i = 0; i < this.data.length; i++) {
+                if (this.data[i].things === this.things) {
+                    flag = true;
+                    break;
+                }
+            }
+            if (!flag) {
+                this.ifShow = true;
+            } else {
+                this.ifShow = false;
+            }
+                
         },
         filterData() {
             // 对多选框的内容进行过滤得到res4数组
@@ -308,82 +349,22 @@ export default {
                 let cT = new Date(curT);
                 return bT <= cT && cT <= eT;
             });
-
-            /*let res = [];
-            for (let i = 0; i < this.data.length; i++) { //双重循环判断
-                //判断是否有host
-                for (let j = 0; j < this.host.length; j++) { 
-                    if (this.data[i].host === this.host[j]) {
-                        //判断是否有area
-                        //console.log("host");
-                        for (let z = 0; z < this.area.length; z++) {
-                            if (this.data[i].area === this.area[z]) {
-                                //console.log("area");
-                                //判断是否为things
-                                if (this.data[i].things === this.things) {
-                                    //console.log("things");
-                                    //判断长度范围
-                                    if (this.minLen <= this.data[i].length && this.data[i].length <= this.maxLen) {
-
-                                        //判断时间范围
-                                        let time = this.data[i].time.toString();
-                                        //console.log(typeof(time));
-                                        let curT = time.slice(0, 4) + '/' + time.slice(4, 6) + '/' + time.slice(6, 8);
-                                        let cT = new Date(curT);
-                                        if (bT <= cT && cT <= eT) {
-                                            //console.log("time");
-                                            res.push(this.data[i]);
-                                        }
-
-                                    }
-
-                                }
-                            }
-                        }
-
-                    }
-                }
-
-            }*/
-            console.log(res);
-            return res;
-      }
-  },
-  methods: {
-    setGenus(genus) {
-        this.genus = genus;
-        //console.log(this.genus);
-    },
-    setTissue(tissue) {
-        this.tissue = tissue;
-    },
-    setHost(host) {
-        this.host = host;
-    },
-    setArea(area) {
-        this.area = area;
-    },
-    setSpecies(species) {
-        this.species = species;
-    },
-    validateThings() {
-        //console.log(this.ifShow);
-        let flag = false;
-        for (let i = 0; i < this.data.length; i++) {
-            if (this.data[i].things === this.things) {
-                flag = true;
-                break;
-            }
+            //console.log(res);
+            this.selectData = res;
+            this.$nextTick(() => {
+					// 2. 再调用子组件的方法使用该属性
+					// 如果不使用 nextTick的话，子组件方法内获取到的有可能是这次赋值之前的值，下次调用时才能获取到此次赋值的值（应该是跟 Vue的异步事件队列有关系）
+					this.$refs.map.initData();
+			})
+            console.log(this.selectData);
         }
-        if (!flag) {
-            this.ifShow = true;
-        } else {
-            this.ifShow = false;
+    },
+    /*mounted() {
+        this.$axios("get")
+        .then() {
+            this.data = ;
         }
-            
-    }
-  }
-
+    }*/
 }
 </script>
 
