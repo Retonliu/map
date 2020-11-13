@@ -20,7 +20,7 @@ export default {
             let res = [];
             let that = this;
             for (let i = 0; i < this.data.length; i++) {
-                if (this.data[i].host === 'Amazona vinacea') {
+                if (this.data[i].host === 'AmaZona vinacea') {
                     let geoCoord = this.geoCoorMap[this.data[i].area];
                     if (geoCoord) {
                         res.push({
