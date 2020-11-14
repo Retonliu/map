@@ -85,10 +85,11 @@ ul {
     position: absolute;
     padding: 0;
     margin-top: 0;
-    height: 120px;
+    height: 320px;
     width: 260px;
     background-color: #FFFFEC;
     overflow: scroll;
+    z-index: 2;
 }
 ul li {
     margin-bottom: 4px;
