@@ -1,7 +1,7 @@
 <template>
     <div id="selectBox">
         <div class="wrap">
-            <input type="text" :placeholder="text" readonly="readonly">
+            <input type="text" :placeholder="text" readonly="readonly" class="bg">
             <span class="iconfont icon-Down" @click="isShow = !isShow"></span>
         </div>
         <ul v-show="isShow">
@@ -53,6 +53,9 @@ export default {
 </script>
 
 <style scoped>
+.bg {
+    background-color: #FFFFEC;
+}
 .icon-finish {
     position: absolute;
     right: 20px;
@@ -67,6 +70,7 @@ export default {
     border: solid 1px #8888;
     border-radius: 12px;
     padding: 1px;
+    background-color: #FFFFEC;
 }
 .wrap {
     cursor: pointer;
@@ -83,7 +87,8 @@ ul {
     margin-top: 0;
     height: 120px;
     width: 260px;
-    background-color: #FFFAFA;
+    background-color: #FFFFEC;
+    overflow: scroll;
 }
 ul li {
     margin-bottom: 4px;
@@ -94,6 +99,6 @@ ul li {
 }
 li:hover {
     color: #fff;
-    background-color: #97FFFF;
+    background-color: #1E90FF;
 }
 </style>

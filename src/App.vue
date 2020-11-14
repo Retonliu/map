@@ -1,5 +1,5 @@
 <template>
-    <div id="MapContainer">
+    <div id="APP">
         <div class="select-wrap">
             <select-box text="genus" v-bind:list="getGenus" v-on:handleList="setGenus" class="box"></select-box>
             <select-box text="species" v-bind:list="getSpecies" v-on:handleList="setSpecies" class="box"></select-box>
@@ -7,7 +7,7 @@
             <select-box text="tissue" v-bind:list="getTissue" v-on:handleList="setTissue" class="box"></select-box>
             <select-box text="area" v-bind:list="getArea" v-on:handleList="setArea" class="box"></select-box>
             <label class="inputThings">
-                accession输入：
+                accession：
                 <input v-model="accession" @blur="validateThings">
                 <p style="display: inline-block;" v-show="ifShow">{{ tipMsg }}</p>
             </label>
@@ -30,7 +30,7 @@
                     最大长度
                     <input type="number" min="0" max="1000" v-model="maxLen">
                 </label>
-                <button @click="filterData" style="margin-left: 4px;">显示</button>
+                <button @click="filterData" style="margin-left: 4px; background-color: #FF9900; color: #ffffff; cursor: pointer; ">显示</button>
             </div>
         </div>
         <world-map v-bind:data="selectData" style="margin-top: 100px;" ref="map"></world-map>
@@ -41,7 +41,7 @@
 import WorldMap from './components/WorldMap.vue'
 import selectBox from './components/selectBox.vue'
 export default {
-    name: 'MapContainer',
+    name: 'APP',
     components: {
         WorldMap,
         selectBox
@@ -560,6 +560,12 @@ export default {
 </script>
 
 <style>
+* {
+    font-family: "Arial", "Helvetica", "sans-serif";
+}
+body {
+    background-color: #F3F3F3;
+}
 .select-wrap {
     display: flex;
     flex-flow: row wrap;
@@ -568,12 +574,13 @@ export default {
 input {
     outline: none;
     border-radius: 12px;
+    background-color: #FFFFEC;
 }
 .inputThings {
-    font-size: 20px;
+    font-size: 10px;
 }
 .inputThings input{
-    width: 50px;
+    width: 100px;
 }
 .tip {
     width: auto;
@@ -581,7 +588,7 @@ input {
     font-size: 20px;
 }
 label p {
-    color: red;
+    color:#C9BC9C;
     font-size: 10px;
 }
 .beginEnd {
