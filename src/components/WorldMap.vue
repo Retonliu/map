@@ -80,19 +80,19 @@ export default {
                 }
             }
             let option = {
-                backgroundColor: '#ffffff',//'#A2CD5A'
+                backgroundColor: '#F3F3F3',//'#A2CD5A'
                 tooltip: {
                     //formatter: 'a: {a}<br/>b: {b}<br/>c:{c1}</br>d:{d}',//a是系列名，b是res中每个元素的name属性，c是value属性
                     trigger: 'item'
                 },
-                title: {
+                /*title: {
                     text: '毒株检索',
                     left: 'center',
                     textStyle: {
                         fontSize: 30,
                         color: '#666666'
                     }
-                },
+                },*/
                 label: {
                     show: false,
                     formatter: '{a}',
@@ -103,11 +103,11 @@ export default {
                     roam: true,
                     top: 120,
                     left: 30,
-                    zoom: 1.2,
+                    zoom: 1,
 
                     itemStyle: {
                         normal: {
-                            areaColor: '#BEBEBE',
+                            areaColor: '#A2CD5A',
                             borderColor: '#111'
                         },
                         emphasis: {
@@ -241,9 +241,9 @@ export default {
 
 <style scoped>
 #WorldMap {
-    width: 800px; 
+    width: 1000px; 
     height: 500px; 
-    margin: 0 auto; 
     z-index: 1;
+    margin: 0 auto;
 }
 </style>

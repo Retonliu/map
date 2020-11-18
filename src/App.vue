@@ -162,13 +162,19 @@ export default {
 * {
     font-family: "Arial", "Helvetica", "sans-serif";
 }
+#APP {
+    width: 1200px;
+    margin: 0 auto;
+}
 body {
-    background-color: #F3F3F3;
+    background-color: #FFFFFF;
 }
 .select-wrap {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 auto;
 }
 input {
     outline: none;
@@ -176,6 +182,7 @@ input {
     background-color: #FFFFEC;
 }
 .inputThings {
+    width: 280px;
     font-size: 10px;
 }
 .inputThings input{
