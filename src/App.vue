@@ -33,7 +33,7 @@
                 <button @click="filterData" style="margin-left: 4px; background-color: #FF9900; color: #ffffff; cursor: pointer; ">显示</button>
             </div>
         </div>
-        <world-map v-bind:data="selectData" style="margin-top: 100px;" ref="map"></world-map>
+        <world-map v-bind:data="selectData" style="margin-top: 50px;" ref="map"></world-map>
     </div>
 </template>
 
@@ -162,10 +162,6 @@ export default {
 * {
     font-family: "Arial", "Helvetica", "sans-serif";
 }
-#APP {
-    width: 1200px;
-    margin: 0 auto;
-}
 body {
     background-color: #FFFFFF;
 }
@@ -173,7 +169,7 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    width: 1000px;
+    width: 99%;
     margin: 0 auto;
 }
 input {
@@ -182,7 +178,6 @@ input {
     background-color: #FFFFEC;
 }
 .inputThings {
-    width: 280px;
     font-size: 10px;
 }
 .inputThings input{

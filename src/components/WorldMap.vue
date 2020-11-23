@@ -101,8 +101,8 @@ export default {
                 geo: {
                     map: 'world',
                     roam: true,
-                    top: 120,
-                    left: 30,
+                    top: 80,
+                    //left: 50,
                     zoom: 1,
 
                     itemStyle: {
@@ -241,7 +241,7 @@ export default {
 
 <style scoped>
 #WorldMap {
-    width: 1000px; 
+    width: 99%; 
     height: 500px; 
     z-index: 1;
     margin: 0 auto;

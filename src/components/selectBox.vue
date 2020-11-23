@@ -63,6 +63,7 @@ export default {
 #selectBox {
     display: inline-block;
     margin: 0 10px;
+    width: 220px;
 }
 .wrap {
     display: inline-block;
@@ -78,6 +79,7 @@ export default {
 input {
     padding: 0;
     border: none;
+    width: 160px;
     font-size: 20px;
     text-align: center;
 }
@@ -85,8 +87,8 @@ ul {
     position: absolute;
     padding: 0;
     margin-top: 0;
-    height: 320px;
-    width: 260px;
+    height: 220px;
+    /*width: 200px;*/
     background-color: #FFFFEC;
     overflow: scroll;
     z-index: 2;
