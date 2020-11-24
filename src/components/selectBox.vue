@@ -88,15 +88,15 @@ ul {
     padding: 0;
     margin-top: 0;
     height: 220px;
-    /*width: 200px;*/
+    width: 200px;
     background-color: #FFFFEC;
     overflow: scroll;
     z-index: 2;
 }
 ul li {
     margin-bottom: 4px;
-    text-align: center;
-    font-size: 20px;
+    text-align: left;
+    font-size: 10px;
     list-style: none;
     cursor: pointer;
 }
