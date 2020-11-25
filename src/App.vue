@@ -6,9 +6,9 @@
             <select-box text="host" v-bind:list="getHost" v-on:handleList="setHost" class="box"></select-box>
             <select-box text="tissue" v-bind:list="getTissue" v-on:handleList="setTissue" class="box"></select-box>
             <select-box text="area" v-bind:list="getArea" v-on:handleList="setArea" class="box"></select-box>
-            <label class="inputThings">
+            <label class="inputAccession">
                 accession：
-                <input v-model="accession" @blur="validateThings">
+                <input v-model="accession" @blur="validateAccession">
                 <p style="display: inline-block;" v-show="ifShow">{{ tipMsg }}</p>
             </label>
             <div style="display: inline-block;" class="beginEnd">
@@ -33,7 +33,7 @@
                 <button @click="filterData" style="margin-left: 4px; background-color: #FF9900; color: #ffffff; cursor: pointer; ">显示</button>
             </div>
         </div>
-        <world-map v-bind:data="selectData" style="margin-top: 50px;" ref="map"></world-map>
+        <world-map v-bind:data="selectData" v-bind:hosts="getHost" style="margin-top: 50px;" ref="map"></world-map>
     </div>
 </template>
 
@@ -88,6 +88,9 @@ export default {
             }
     },
     methods: {
+        /*
+         set方法设置
+        */
         setGenus(genus) {
             this.genus = genus;
             //console.log(this.genus);
@@ -104,11 +107,11 @@ export default {
         setSpecies(species) {
             this.species = species;
         },
-        validateThings() {
+        validateAccession() {
             //console.log(this.ifShow);
             let flag = false;
             for (let i = 0; i < this.data.length; i++) {
-                if (this.data[i].things === this.things) {
+                if (this.data[i].accession === this.accession) {
                     flag = true;
                     break;
                 }
@@ -177,10 +180,10 @@ input {
     border-radius: 12px;
     background-color: #FFFFEC;
 }
-.inputThings {
+.inputAccession {
     font-size: 10px;
 }
-.inputThings input{
+.inputAccession input{
     width: 100px;
 }
 .tip {

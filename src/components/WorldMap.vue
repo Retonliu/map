@@ -7,69 +7,85 @@ let echarts = require('echarts/lib/echarts');
 import geoData from '../data/geoData.js'
 export default {
     name: 'WorldMap',
-    props: ['data'],
+    props: ['data', 'hosts'],
     data() {
         return {
-            myChart: Object,
+            myChart: null,
             geoCoorMap: geoData,
         }
     },
     computed: {
-        convertDataA() {
-            let res = [];
-            let that = this;
-            for (let i = 0; i < this.data.length; i++) {
-                if (this.data[i].host === 'AmaZona vinacea') {
-                    let geoCoord = this.geoCoorMap[this.data[i].area];
-                    if (geoCoord) {
-                        res.push({
-                            value: [...geoCoord, that.data[i].length, that.data[i].tissue, that.data[i].genus],
-                            symbolOffset: [Math.floor((Math.random()*100)+1)+'%', Math.floor((Math.random()*100)+1)+'%'],
-                        });
-                    }
-                }
-            }
-            //console.log(res);
-            return res;
-        },
-        convertDataB() {
-            let res = [];
-            let that = this;
-            for (let i = 0; i < this.data.length; i++) {
-                if (this.data[i].host === 'Anas acuta') {
-                    let geoCoord = this.geoCoorMap[this.data[i].area];
-                    if (geoCoord) {
-                        res.push({
-                            value: [...geoCoord, that.data[i].length, that.data[i].tissue, that.data[i].genus],
-                            symbolOffset: [Math.floor((Math.random()*100)+1)+'%', Math.floor((Math.random()*100)+1)+'%'],
-                        });
-                    }
-                }
-            }
-            //console.log(res);
-            return res;
-        },
-        convertDataC() {
-            let res = [];
-            let that = this;
-            for (let i = 0; i < this.data.length; i++) {
-                if (this.data[i].host === 'Anas crecca') {
-                    let geoCoord = this.geoCoorMap[this.data[i].area];
-                    if (geoCoord) {
-                        res.push({
-                            value: [...geoCoord, that.data[i].length, that.data[i].tissue, that.data[i].genus],
-                            symbolOffset: [Math.floor((Math.random()*100)+1)+'%', Math.floor((Math.random()*100)+1)+'%'],
-                        });
-                    }
-                }
-            }
-            //console.log(res);
-            return res;
-        },
+    
     },
     methods: {
+        convertData(host) {
+            let res = [];
+            let that = this;
+            for (let i = 0; i < this.data.length; i++) {
+                if (this.data[i].host === host) {
+                    let geoCoord = this.geoCoorMap[this.data[i].area];
+                    if (geoCoord) {
+                        res.push({
+                            value: [...geoCoord, that.data[i].length, that.data[i].tissue, that.data[i].genus],
+                            symbolOffset: [Math.floor((Math.random()*100)+1)+'%', Math.floor((Math.random()*100)+1)+'%'],
+                        });
+                    }
+                }
+            }
+            //console.log(res);
+            return res;
+        },
         handleMapOption() {
-
+            let seriesArr = [],
+                that = this;
+            for (const host of this.hosts) {
+                const serie = {
+                    name: host.host,
+                    coordinateSystem: 'geo',
+                    geoIndex: 0,
+                    type: "scatter",
+                    data: that.convertData(host),
+                    symbolSize: 20,
+                    roam: true,
+                    animation: true,
+                    encode: {
+                        value: 2,
+                        tooltip: [2, 3, 4]
+                    },
+                    tooltip: {
+                        //formatter: '',
+                        //trigger: 'item'
+                    },
+                    animationDuration: function (idx) {
+                        return idx * 200;
+                    },
+                    animationDelay: function (idx) {
+                        return idx * 200;
+                    },
+                    animationEasing: function (k) {
+                        return --k * k * k + 1;
+                    },
+                }
+                seriesArr.push(serie);
+            }
+            return seriesArr;
+        },
+        handleVisualMap() {
+            const colors = [[], [], [], [], [], []]; //visualMap对其进行了引用，所以即使作用域销毁，也不会影响
+            let visualMaps = [];
+            for (let i = 0, len = this.hosts.length; i < len; i++) {
+                const visualMap = {
+                    show: false,
+                    min: 0,
+                    max: 1000,
+                    seriesIndex: i,
+                    dimension: 2,
+                    color: colors[i],
+                    type: 'continuous',
+                }
+                visualMaps.push(visualMap);
+            }
+            return visualMaps;
         },
         initMap: function() {
             //console.log(this.data);
@@ -104,7 +120,6 @@ export default {
                     top: 80,
                     //left: 50,
                     zoom: 1,
-
                     itemStyle: {
                         normal: {
                             areaColor: '#A2CD5A',
@@ -115,112 +130,8 @@ export default {
                         }
                     }
                 },
-                visualMap: [
-                    {
-                        show: false,
-                        min: 0,
-                        max: 1000,
-                        seriesIndex: 0,
-                        dimension: 2,
-                        color: ['#BBFFFF', '#53868B'],
-                        type: 'continuous',
-                    },
-                    {
-                        show: false,
-                        min: 0,
-                        max: 1000,
-                        seriesIndex: 1,
-                        dimension: 2,
-                        color: ['#C1FFC1', '#2E8B57'],
-                        type: 'continuous',
-                    },
-                    {
-                        show: false,
-                        min: 0,
-                        max: 1000,
-                        seriesIndex: 2,
-                        dimension: 2,
-                        color: ['#EEEE00', '#8B8B00'],
-                        type: 'continuous',
-                    },
-                    /*{
-                        show: false,
-                        min: 0,
-                        max: 1000,
-                        seriesIndex: 3,
-                        color: ['#D3D3D3', '#696969'],
-                        type: 'continuous',
-                    }*/
-                ],
-                series: [
-                    {
-                        name: "Amazona vinacea",
-                        coordinateSystem: 'geo',
-                        geoIndex: 0,
-                        type: "scatter",
-                        data: that.convertDataA,
-                        symbolSize: 20,
-                        roam: true,
-                        animation: true,
-                        encode: {
-                            value: 2,
-                            tooltip: [2, 3]
-                        },
-                        animationDuration: function (idx) {
-                            return idx * 200;
-                        },
-                        animationDelay: function (idx) {
-                            return idx * 200;
-                        },
-                        animationEasing: easingFuncs.cubicOut,
-                    },
-                    {
-                        name: "Anas acuta",
-                        coordinateSystem: 'geo',
-                        geoIndex: 0,
-                        type: "scatter",
-                        data: that.convertDataB,
-                        symbolSize: 20,
-                        roam: true,
-                        animation: true,
-                        encode: {
-                            value: 2,
-                            tooltip: [2, 3]
-                        },
-                        animationDuration: function (idx) {
-                            return idx * 200;
-                        },
-                        animationDelay: function (idx) {
-                            return idx * 200;
-                        },
-                        animationEasing: easingFuncs.cubicOut,
-                    },
-                    {
-                        name: "Anas creacca",
-                        coordinateSystem: 'geo',
-                        geoIndex: 0,
-                        type: "scatter",
-                        data: that.convertDataC,
-                        symbolSize: 20,
-                        roam: true,
-                        animation: true,
-                        encode: {
-                            value: 2,
-                            tooltip: [2, 3, 4]
-                        },
-                        tooltip: {
-                            //formatter: '',
-                            //trigger: 'item'
-                        },
-                        animationDuration: function (idx) {
-                            return idx * 200;
-                        },
-                        animationDelay: function (idx) {
-                            return idx * 200;
-                        },
-                        animationEasing: easingFuncs.cubicOut,
-                    },
-                ]
+                visualMap: this.handleVisualMap,
+                series: this.handleMapOption
             };
             this.myChart.setOption(option);
         }
