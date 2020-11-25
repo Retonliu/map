@@ -5,6 +5,7 @@
 <script>
 let echarts = require('echarts/lib/echarts');
 import geoData from '../data/geoData.js'
+import colorData from '../data/colors.js'
 export default {
     name: 'WorldMap',
     props: ['data', 'hosts'],
@@ -12,6 +13,7 @@ export default {
         return {
             myChart: null,
             geoCoorMap: geoData,
+            colors: colorData
         }
     },
     computed: {
@@ -21,6 +23,7 @@ export default {
         convertData(host) {
             let res = [];
             let that = this;
+            //console.log(this.data);
             for (let i = 0; i < this.data.length; i++) {
                 if (this.data[i].host === host) {
                     let geoCoord = this.geoCoorMap[this.data[i].area];
@@ -44,7 +47,7 @@ export default {
                     coordinateSystem: 'geo',
                     geoIndex: 0,
                     type: "scatter",
-                    data: that.convertData(host),
+                    data: that.convertData(host.host),
                     symbolSize: 20,
                     roam: true,
                     animation: true,
@@ -71,7 +74,7 @@ export default {
             return seriesArr;
         },
         handleVisualMap() {
-            const colors = [[], [], [], [], [], []]; //visualMap对其进行了引用，所以即使作用域销毁，也不会影响
+            const that = this;
             let visualMaps = [];
             for (let i = 0, len = this.hosts.length; i < len; i++) {
                 const visualMap = {
@@ -80,7 +83,7 @@ export default {
                     max: 1000,
                     seriesIndex: i,
                     dimension: 2,
-                    color: colors[i],
+                    color: that.colors[i],
                     type: 'continuous',
                 }
                 visualMaps.push(visualMap);
@@ -88,13 +91,13 @@ export default {
             return visualMaps;
         },
         initMap: function() {
-            //console.log(this.data);
+            /*console.log(this.data);
             let that = this;
             let easingFuncs = {
                 cubicOut: function (k) {
                     return --k * k * k + 1;
                 }
-            }
+            }*/
             let option = {
                 backgroundColor: '#F3F3F3',//'#A2CD5A'
                 tooltip: {
@@ -130,13 +133,18 @@ export default {
                         }
                     }
                 },
-                visualMap: this.handleVisualMap,
-                series: this.handleMapOption
+                visualMap: this.handleVisualMap(),
+                series: this.handleMapOption()
             };
             this.myChart.setOption(option);
+            console.log(option);
         }
     },
     mounted() {
+        if (!localStorage.getItem("colors")) {
+            const colors = [['#BBFFFF', '#53868B'], ['#C1FFC1', '#2E8B57'], ['#EEEE00', '#8B8B00'], ['#D3D3D3', '#696969'], [], []]; //visualMap对其进行了引用，所以即使作用域销毁，也不会影响
+            localStorage.setItem("colors", colors);
+        }
         this.myChart = echarts.init(this.$refs.worldmap);
         this.initMap();
     },
