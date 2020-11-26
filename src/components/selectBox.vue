@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import { store } from '../data/store.js'
 export default {
     name: 'selectBox',
     props: ['text', 'list'],
@@ -42,11 +43,12 @@ export default {
             
         },
         handleChecked(index) {
-            //console.log(this.dataMap.get(obj) === true);
+            /*console.log(this.dataMap.get(obj) === true);
             let that = this;
-            this.setChecked(index);
             this.$emit('handleList', that.collectChecked);
-            //console.log(that.collectChecked);
+            console.log(that.collectChecked);*/
+            this.setChecked(index);
+            store.setData(this.text, this.collectChecked);
         }
     }
 }

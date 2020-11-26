@@ -4,8 +4,8 @@
 
 <script>
 let echarts = require('echarts/lib/echarts');
-import geoData from '../data/geoData.js'
-import colorData from '../data/colors.js'
+import { geoData, colors } from '../data/store.js'
+
 export default {
     name: 'WorldMap',
     props: ['data', 'hosts'],
@@ -13,11 +13,10 @@ export default {
         return {
             myChart: null,
             geoCoorMap: geoData,
-            colors: colorData
+            colorData: colors
         }
     },
     computed: {
-    
     },
     methods: {
         convertData(host) {
@@ -83,7 +82,7 @@ export default {
                     max: 1000,
                     seriesIndex: i,
                     dimension: 2,
-                    color: that.colors[i],
+                    color: that.colorData[i],
                     type: 'continuous',
                 }
                 visualMaps.push(visualMap);

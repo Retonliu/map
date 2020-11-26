@@ -40,7 +40,7 @@
 <script>
 import WorldMap from './components/WorldMap.vue'
 import selectBox from './components/selectBox.vue'
-import randomData from './data/config.js'
+import { randomData, store } from './data/store.js'
 export default {
     name: 'APP',
     components: {
@@ -49,11 +49,6 @@ export default {
     },
     data() {
         return {
-            genus: [],
-            species: [],
-            tissue: [],
-            host: [],
-            area: [],
             accession: '',
             beginTime: '',
             endTime: '',
@@ -126,11 +121,11 @@ export default {
         filterData() {
             // 对多选框的内容进行过滤得到res4数组
             //const that = this;
-            let res = this.data.filter((item1) => this.genus.some((item2) => item1.genus===item2.genus))
-                .filter((item1) => this.host.some((item2) => item1.host === item2.host))
-                .filter((item1) => this.species.some((item2) => item1.species === item2.species))
-                .filter((item1) => this.tissue.some((item2) => item1.tissue === item2.tissue))
-                .filter((item1) => this.area.some((item2) => item1.area === item2.area))
+            let res = this.data.filter((item1) => store.state.genus.some((item2) => item1.genus===item2.genus))
+                .filter((item1) => store.state.host.some((item2) => item1.host === item2.host))
+                .filter((item1) => store.state.species.some((item2) => item1.species === item2.species))
+                .filter((item1) => store.state.tissue.some((item2) => item1.tissue === item2.tissue))
+                .filter((item1) => store.state.area.some((item2) => item1.area === item2.area))
                 .filter((item) => item.accession===this.accession)
                 .filter((item) => this.minLen <= item.length && item.length <= this.maxLen),
                 bT = new Date(this.beginTime.replace("-", "/")),
@@ -143,21 +138,24 @@ export default {
                 let cT = new Date(curT);
                 return bT <= cT && cT <= eT;
             });
-            console.log(res);
+            //console.log(res);
             this.selectData = res;
-            this.$nextTick(() => {
+            /*this.$nextTick(() => {
 					// 2. 再调用子组件的方法使用该属性
 					// 如果不使用 nextTick的话，子组件方法内获取到的有可能是这次赋值之前的值，下次调用时才能获取到此次赋值的值（应该是跟 Vue的异步事件队列有关系）
 					//that.$refs.map.initData();
 			})
-            console.log(this.selectData);
+            console.log(this.selectData);*/
         }
     },
     /*mounted() {
-        this.$axios("get")
-        .then() {
-            this.data = ;
+        if (!this.store) {
+            this.$axios("get", url)
+                .then() {
+                    this.data = ;
+                }
         }
+        
     }*/
 }
 </script>
