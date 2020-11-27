@@ -1,11 +1,11 @@
 <template>
     <div id="APP">
         <div class="select-wrap">
-            <select-box text="genus" v-bind:list="getGenus" v-on:handleList="setGenus" class="box"></select-box>
-            <select-box text="species" v-bind:list="getSpecies" v-on:handleList="setSpecies" class="box"></select-box>
-            <select-box text="host" v-bind:list="getHost" v-on:handleList="setHost" class="box"></select-box>
-            <select-box text="tissue" v-bind:list="getTissue" v-on:handleList="setTissue" class="box"></select-box>
-            <select-box text="area" v-bind:list="getArea" v-on:handleList="setArea" class="box"></select-box>
+            <select-box text="genus" v-bind:list="getGenus" class="box"></select-box>
+            <select-box text="species" v-bind:list="getSpecies" class="box"></select-box>
+            <select-box text="host" v-bind:list="getHost" class="box"></select-box>
+            <select-box text="tissue" v-bind:list="getTissue" class="box"></select-box>
+            <select-box text="area" v-bind:list="getArea" class="box"></select-box>
             <label class="inputAccession">
                 accession：
                 <input v-model="accession" @blur="validateAccession">
@@ -83,25 +83,6 @@ export default {
             }
     },
     methods: {
-        /*
-         set方法设置
-        */
-        setGenus(genus) {
-            this.genus = genus;
-            //console.log(this.genus);
-        },
-        setTissue(tissue) {
-            this.tissue = tissue;
-        },
-        setHost(host) {
-            this.host = host;
-        },
-        setArea(area) {
-            this.area = area;
-        },
-        setSpecies(species) {
-            this.species = species;
-        },
         validateAccession() {
             //console.log(this.ifShow);
             let flag = false;
