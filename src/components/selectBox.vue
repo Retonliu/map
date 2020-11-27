@@ -2,9 +2,9 @@
     <div id="selectBox">
         <div class="wrap">
             <input type="text" :placeholder="text" readonly="readonly" class="bg">
-            <span class="iconfont icon-Down" @click="isShow = !isShow"></span>
+            <span class="iconfont icon-Down" @mouseover="showPane"></span>
         </div>
-        <ul v-show="isShow">
+        <ul v-show="isShow" @mouseleave="hidePane">
             <li v-for="(item, index) in list" :key="item[text]" @click="handleChecked(index)">
                 {{ item[text] }}
                 <span class="iconfont icon-finish" v-show="checkedList[index]"></span>
@@ -22,7 +22,6 @@ export default {
         return {
             isShow: false,
             content: this.text,
-            //dataMap: new Map()
             checkedList: []
         }
     },
@@ -36,10 +35,16 @@ export default {
         }
     },
     methods: {
+        showPane() {
+            this.isShow = true;
+        },
+        hidePane() {
+            this.isShow = false;
+        },
         setChecked(index) {
             /*let value = this.dataMap.get(obj);
             this.dataMap.set(obj, !value);*/
-            this.$set(this.checkedList, index, !this.checkedList[index]) //this.checkedList[index] = true
+            this.$set(this.checkedList, index, !this.checkedList[index]); //this.checkedList[index] = true
             
         },
         handleChecked(index) {
@@ -69,7 +74,6 @@ export default {
 }
 .wrap {
     display: inline-block;
-    margin-bottom: 5px;
     border: solid 1px #8888;
     border-radius: 12px;
     padding: 1px;
