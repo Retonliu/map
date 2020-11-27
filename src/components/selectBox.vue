@@ -1,10 +1,10 @@
 <template>
-    <div id="selectBox">
+    <div id="selectBox" @mouseleave="hidePane">
         <div class="wrap">
             <input type="text" :placeholder="text" readonly="readonly" class="bg">
             <span class="iconfont icon-Down" @mouseover="showPane"></span>
         </div>
-        <ul v-show="isShow" @mouseleave="hidePane">
+        <ul v-show="isShow">
             <li v-for="(item, index) in list" :key="item[text]" @click="handleChecked(index)">
                 {{ item[text] }}
                 <span class="iconfont icon-finish" v-show="checkedList[index]"></span>
@@ -53,7 +53,7 @@ export default {
             this.$emit('handleList', that.collectChecked);
             console.log(that.collectChecked);*/
             this.setChecked(index);
-            store.setData(this.text, this.collectChecked);
+            store.setSelect(this.text, this.collectChecked);
         }
     }
 }
