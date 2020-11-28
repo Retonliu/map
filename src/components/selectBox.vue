@@ -97,6 +97,7 @@ ul {
     width: 200px;
     background-color: #FFFFEC;
     overflow: scroll;
+    overflow-x: hidden;
     z-index: 2;
 }
 ul li {

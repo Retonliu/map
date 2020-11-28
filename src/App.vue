@@ -30,7 +30,7 @@
                     最大长度
                     <input type="number" min="0" max="1000" v-model="maxLen">
                 </label>
-                <button @click="filterData" style="margin-left: 4px; background-color: #FF9900; color: #ffffff; cursor: pointer; ">显示</button>
+                <button @click="filterData" style=" outline: none; border-radius: 12px;margin-left: 4px; background-color: #FF9900; color: #ffffff; cursor: pointer; font-size: 20px; ">显示</button>
             </div>
         </div>
         <world-map v-bind:data="selectData" v-bind:hosts="getHost" style="margin-top: 50px;" ref="map"></world-map>
@@ -152,6 +152,7 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    align-items: center;
     width: 99%;
     margin: 0 auto;
 }
