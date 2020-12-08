@@ -38,7 +38,10 @@ var colors = [
             ['#D3D3D3', '#696969'], 
             ['#FFFAFA', '#F8F8FF'], 
             ['#FAEBD7', '#FFE4C4'],
-            ['#2E8B57', '#006400']
+            ['#2E8B57', '#006400'],
+            ['#FFB6C1', '#FFC0CB'],
+            ['#EE82EE', '#FF00FF'],
+            ['#7B68EE', '#6A5ACD']
 ];
 var geoData = {
     'Afghanistan':[67.709953,33.93911],
