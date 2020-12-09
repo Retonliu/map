@@ -140,10 +140,6 @@ export default {
         }
     },
     mounted() {
-        if (!localStorage.getItem("colors")) {
-            const colors = [['#BBFFFF', '#53868B'], ['#C1FFC1', '#2E8B57'], ['#EEEE00', '#8B8B00'], ['#D3D3D3', '#696969'], [], []]; //visualMap对其进行了引用，所以即使作用域销毁，也不会影响
-            localStorage.setItem("colors", colors);
-        }
         this.myChart = echarts.init(this.$refs.worldmap);
         this.initMap();
     },

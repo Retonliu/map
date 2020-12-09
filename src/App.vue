@@ -130,12 +130,7 @@ export default {
         }
     },
     /*mounted() {
-        if (!this.store) {
-            this.$axios("get", url)
-                .then() {
-                    this.data = ;
-                }
-        }
+        //在这里通过axios引入服务器传来的数据
         
     }*/
 }
