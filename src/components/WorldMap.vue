@@ -136,7 +136,7 @@ export default {
                 series: this.handleMapOption()
             };
             this.myChart.setOption(option);
-            console.log(option);
+            //console.log(option);
         }
     },
     mounted() {

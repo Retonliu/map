@@ -41,7 +41,8 @@ var colors = [
             ['#2E8B57', '#006400'],
             ['#FFB6C1', '#FFC0CB'],
             ['#EE82EE', '#FF00FF'],
-            ['#7B68EE', '#6A5ACD']
+            ['#7B68EE', '#6A5ACD'],
+            []
 ];
 var geoData = {
     'Afghanistan':[67.709953,33.93911],
@@ -230,6 +231,16 @@ var randomData = [
         tissue: "feces",
         length: 200,
         time: "2020-09-27",
+        area: "Poland",
+        accession: "KU251481",
+    },
+    {
+        genus: "Deltacoronarirus",
+        species: "Deltacoronavirus B04",
+        host: "AmaZona vinacea",
+        tissue: "feces",
+        length: 200,
+        time: "2020.0",
         area: "Poland",
         accession: "KU251481",
     },

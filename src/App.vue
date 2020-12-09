@@ -28,7 +28,7 @@
                 </label>
                 <label>
                     最大长度
-                    <input type="number" min="0" max="1000" v-model="maxLen">
+                    <input type="number" min="0" max="9999" v-model="maxLen">
                 </label>
                 <button @click="filterData" style=" outline: none; border-radius: 12px;margin-left: 4px; background-color: #FF9900; color: #ffffff; cursor: pointer; font-size: 20px; ">显示</button>
             </div>
@@ -111,27 +111,31 @@ export default {
                 .filter((item) => this.minLen <= item.length && item.length <= this.maxLen),
                 bT = new Date(this.beginTime.replace("-", "/")),
                 eT = new Date(this.endTime.replace("-", "/"));
-            //console.log(res);
             res = res.filter(function(item) {
-                let curT = item.time.toString().replace("-", "/");
-                //console.log(curT);
-                //let curT = time.slice(0, 4) + '/' + time.slice(4, 6) + '/' + time.slice(6, 8);
-                let cT = new Date(curT);
+                const pattern = /\d{4}-\d{2}-\d{2}/g;
+                let curT = null;
+                if (pattern.test(item.time)) {
+                    curT = item.time.toString();
+                } else { //处理类似2020.0的日期
+                    curT = item.time.toString().slice(0, 4);
+                    curT = curT + '-' + '01' + '-' + '01';
+                }
+                const cT = new Date(curT);
                 return bT <= cT && cT <= eT;
             });
-            //console.log(res);
             this.selectData = res;
-            /*this.$nextTick(() => {
-					// 2. 再调用子组件的方法使用该属性
-					// 如果不使用 nextTick的话，子组件方法内获取到的有可能是这次赋值之前的值，下次调用时才能获取到此次赋值的值（应该是跟 Vue的异步事件队列有关系）
-					//that.$refs.map.initData();
-			})
-            console.log(this.selectData);*/
         }
     },
     /*mounted() {
         //在这里通过axios引入服务器传来的数据
-        
+        let that = this;
+        this.$axios
+            .get(urlData) //get请求传入参数
+            .then(response => {
+                if (response.data.code == 0) { //如果发送get请求成功
+                    this.data = response.data.data; //把获得的数据放到this.data里面。
+                }
+            }); 
     }*/
 }
 </script>
