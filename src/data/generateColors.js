@@ -82,12 +82,12 @@ function LightenDarkenColor (col, amt) {
 }
 
 function getContrastYIQ(hexcolor) {
-    let colorrgb = colorRgb(hexcolor);
-        colors = colorrgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
-        red = colors[1];
-        green = colors[2];
-        blue = colors[3];
-    let brightness = (red * 299) + (green * 587) + (blue * 114);
+    let colorrgb = colorRgb(hexcolor),
+        colors = colorrgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/),
+        red = colors[1],
+        green = colors[2],
+        blue = colors[3],
+        brightness = (red * 299) + (green * 587) + (blue * 114);
     brightness = brightness / 255000;
     if (brightness >= 0.5) {
       return "light";
@@ -96,16 +96,16 @@ function getContrastYIQ(hexcolor) {
     }
 }
 
-function showSet() {
+/*function showSet() {
     for (const c of set) {
         console.log(c);
     }
-}
+}*/
 
 function generateColorArr() {
     let color = "",
         colors = [],
-        chose = "0123456789abcdef";
+        chose = "0123456789abcdef",
         set = new Set();
     while (set.size <= 220) { //生成220个数组
         let flag = true;
@@ -121,7 +121,7 @@ function generateColorArr() {
     for (const lightColor of set) {
         let amt = -40, //调暗参数，< 0为变暗，>0为变亮
             darkColor = LightenDarkenColor(colorHex(lightColor), amt);
-        colors.push([lightColor, darkColor]);
+        colors.push([darkColor, lightColor]);
     }
     return colors;
 }

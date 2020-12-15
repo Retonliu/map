@@ -2262,4 +2262,4 @@ var randomData = [
         accession: "KU251481",  
     },
 ];
-export {store, geoData, colors, randomData};
+export {store, geoData, randomData};
