@@ -27,7 +27,8 @@ export default {
                     let geoCoord = this.geoCoorMap[this.data[i].area];
                     if (geoCoord) {
                         res.push({
-                            value: [...geoCoord, that.data[i].length, that.data[i].tissue, that.data[i].genus],
+                            value: [...geoCoord, that.data[i].length, that.data[i].tissue, that.data[i].genus, 
+                                    that.data[i].time, that.data[i].area],
                             symbolOffset: [Math.floor((Math.random()*100)+1)+'%', Math.floor((Math.random()*100)+1)+'%'],
                         });
                     }
@@ -51,7 +52,7 @@ export default {
                     animation: true,
                     encode: {
                         value: 2,
-                        tooltip: [2, 3, 4]
+                        tooltip: [2, 3, 4, 5, 6]
                     },
                     tooltip: {
                         //formatter: '',
@@ -105,7 +106,7 @@ export default {
             let option = {
                 backgroundColor: '#F3F3F3',//'#A2CD5A'
                 tooltip: {
-                    //formatter: 'a: {a}<br/>b: {b}<br/>c:{c1}</br>d:{d}',//a是系列名，b是res中每个元素的name属性，c是value属性
+                    //formatter: 'a: {a}<br/>c:{c1}',//a是系列名，b是res中每个元素的name属性，c是value属性
                     trigger: 'item'
                 },
                 /*title: {
