@@ -1,9 +1,7 @@
 var store = {
     debug: true,
     state: {
-        data: [
-
-        ],
+        data: [],
         genus: [],
         species: [],
         tissue: [],

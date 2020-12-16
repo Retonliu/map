@@ -132,8 +132,8 @@ export default {
         this.$axios
             .get(urlData) //get请求传入参数
             .then(response => {
-                if (response.data.code == 0) { //如果发送get请求成功
-                    this.data = response.data.data; //把获得的数据放到this.data里面。
+                if (response.data.code == 0) { //如果发送get请求成功(根据接口返回值进行判断)，这里只是假设
+                    this.data = response.data.data; //把获得的数据放到this.data里面。这里只是假设
                 }
             }); 
     }*/
@@ -161,6 +161,7 @@ input {
     background-color: #FFFFEC;
 }
 .inputAccession {
+    width: 298px;
     font-size: 10px;
 }
 .inputAccession input{
@@ -172,6 +173,7 @@ input {
     font-size: 20px;
 }
 label p {
+    margin: 0;
     color:#C9BC9C;
     font-size: 10px;
 }
