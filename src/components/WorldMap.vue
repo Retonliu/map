@@ -73,7 +73,12 @@ export default {
         },
         handleVisualMap() {
             //that = this,
-            const colors = generateColorArr();
+            if (!localStorage.getItem("colorsArrOfMap")) {
+                const tmpColors = generateColorArr();
+                localStorage.setItem("colorsArrOfMap", JSON.stringify(tmpColors));
+            }
+            const colors = JSON.parse(localStorage.getItem("colorsArrOfMap"));
+            console.log(colors);
             let visualMaps = [];
             for (let i = 0, len = this.hosts.length; i < len; i++) {
                 const visualMap = {
