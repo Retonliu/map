@@ -106,7 +106,7 @@ export default {
             let option = {
                 backgroundColor: '#F3F3F3',//'#A2CD5A'
                 tooltip: {
-                    //formatter: 'a: {a}<br/>c:{c1}',//a是系列名，b是res中每个元素的name属性，c是value属性
+                    //formatter: (params: , ticket: string, callback: (ticket: string, html: string)) => string,//'a: {a}<br/>c:{c1}',//a是系列名，b是res中每个元素的name属性，c是value属性
                     trigger: 'item'
                 },
                 /*title: {
