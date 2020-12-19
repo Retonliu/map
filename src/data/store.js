@@ -218,6 +218,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Poland",
         accession: "KU251481",
+        virusGenes: "Deltacoronavirus B04 RNA-dependent RNA polymerase (RdRp) gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -228,6 +229,7 @@ var randomData = [
         time: "2020.0",
         area: "Poland",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -238,6 +240,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Egypt",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -248,6 +251,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Egypt",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -258,6 +262,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Egypt",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -268,6 +273,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Sweden",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -278,6 +284,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Brazil",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -288,6 +295,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Brazil",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -298,6 +306,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Brazil",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -308,6 +317,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Brazil",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -318,6 +328,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Brazil",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -328,6 +339,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Brazil",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -338,6 +350,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Brazil",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -348,6 +361,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Brazil",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -358,6 +372,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Russia",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -368,6 +383,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Russia",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -378,6 +394,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Russia",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -388,6 +405,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Russia",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -398,6 +416,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Russia",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -408,6 +427,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Russia",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -418,6 +438,7 @@ var randomData = [
         time: "2020-09-27",
         area: "China",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -428,6 +449,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Mexica",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -438,6 +460,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Mexica",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -448,6 +471,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Mexica",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -458,6 +482,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Mexica",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -468,6 +493,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Indonesia",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -478,6 +504,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Indonesia",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -488,6 +515,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Indonesia",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -498,6 +526,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Indonesia",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -508,6 +537,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Mexica",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -518,6 +548,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Mexica",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -528,6 +559,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Mexica",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -538,6 +570,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Mexica",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -548,6 +581,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Mexica",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -558,6 +592,7 @@ var randomData = [
         time: "2020-09-27",
         area: "Mexica",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -568,6 +603,7 @@ var randomData = [
         time: "2020-09-27",
         area: "China",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -578,6 +614,7 @@ var randomData = [
         time: "2020-09-27",
         area: "China",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -588,6 +625,7 @@ var randomData = [
         time: "2020-09-27",
         area: "China",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -598,6 +636,7 @@ var randomData = [
         time: "2020-09-27",
         area: "China",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -607,7 +646,8 @@ var randomData = [
         length: 130,
         time: "2020-09-27",
         area: "Vietnam",
-        accession: "KU251481"
+        accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -618,6 +658,7 @@ var randomData = [
         time: "2020-09-27",
         area: "China",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -627,7 +668,8 @@ var randomData = [
         length: 230,
         time: "2020-09-26",
         area: "Japan",
-        accession: "KU251481"
+        accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -638,6 +680,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Korea",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -648,6 +691,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Canada",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -658,6 +702,7 @@ var randomData = [
         time: "2020-09-26",
         area: "India",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -668,6 +713,7 @@ var randomData = [
         time: "2020-09-26",
         area: "India",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -678,6 +724,7 @@ var randomData = [
         time: "2020-09-26",
         area: "India",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -688,6 +735,7 @@ var randomData = [
         time: "2020-09-26",
         area: "India",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -698,6 +746,7 @@ var randomData = [
         time: "2020-09-26",
         area: "India",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -708,6 +757,7 @@ var randomData = [
         time: "2020-09-26",
         area: "India",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -718,6 +768,7 @@ var randomData = [
         time: "2020-09-26",
         area: "India",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -728,6 +779,7 @@ var randomData = [
         time: "2020-09-26",
         area: "India",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -738,6 +790,7 @@ var randomData = [
         time: "2020-09-26",
         area: "India",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -748,6 +801,7 @@ var randomData = [
         time: "2020-09-26",
         area: "India",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -758,8 +812,9 @@ var randomData = [
         time: "2020-09-26",
         area: "Iran",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
-                    {
+    {
         genus: "Deltacoronarirus",
         species: "Deltacoronavirus",
         host: "Anas crecca",
@@ -768,6 +823,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Iran",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -778,6 +834,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Romania",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -788,6 +845,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Romania",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -798,6 +856,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Romania",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -808,6 +867,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Argentina",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -818,6 +878,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Argentina",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -828,6 +889,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Argentina",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -838,6 +900,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Argentina",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -848,6 +911,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Argentina",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -858,6 +922,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Argentina",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -868,6 +933,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Argentina",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -878,6 +944,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Argentina",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -888,6 +955,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Argentina",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -898,6 +966,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Argentina",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Deltacoronarirus",
@@ -908,6 +977,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Canada",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -918,6 +988,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Canada",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -928,6 +999,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Canada",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -938,6 +1010,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Russia",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -948,6 +1021,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Russia",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -958,6 +1032,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Brazil",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -968,6 +1043,7 @@ var randomData = [
         time: "2020-09-26",
         area: "USA",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -978,6 +1054,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Japan",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -988,6 +1065,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Myanmar",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1208,6 +1286,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Myanmar",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1218,6 +1297,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Myanmar",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1228,6 +1308,7 @@ var randomData = [
         time: "2020-09-26",
         area: "New Zealand",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1238,6 +1319,7 @@ var randomData = [
         time: "2020-09-26",
         area: "New Zealand",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1248,6 +1330,7 @@ var randomData = [
         time: "2020-09-26",
         area: "New Zealand",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1258,6 +1341,7 @@ var randomData = [
         time: "2020-09-26",
         area: "New Zealand",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
 
     {
@@ -1269,6 +1353,7 @@ var randomData = [
         time: "2020-09-26",
         area: "New Zealand",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },{
         genus: "Gammacoronavirus",
         species: "Deltacoronavirus",
@@ -1278,6 +1363,7 @@ var randomData = [
         time: "2020-09-26",
         area: "New Zealand",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1288,6 +1374,7 @@ var randomData = [
         time: "2020-09-26",
         area: "New Zealand",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1298,6 +1385,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Bolivia",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1308,6 +1396,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Bolivia",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1318,6 +1407,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Bolivia",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1328,6 +1418,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Bolivia",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1338,6 +1429,7 @@ var randomData = [
         time: "2020-09-26",
         area: "South Africa",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1348,6 +1440,7 @@ var randomData = [
         time: "2020-09-26",
         area: "South Africa",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1358,6 +1451,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Kazakhstan",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1368,6 +1462,7 @@ var randomData = [
         time: "2020-09-26",
         area: "South Africa",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1378,6 +1473,7 @@ var randomData = [
         time: "2020-09-26",
         area: "South Africa",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1388,6 +1484,7 @@ var randomData = [
         time: "2020-09-26",
         area: "South Africa",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1398,6 +1495,7 @@ var randomData = [
         time: "2020-09-26",
         area: "New Zealand",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1408,6 +1506,7 @@ var randomData = [
         time: "2020-09-26",
         area: "New Zealand",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1418,6 +1517,7 @@ var randomData = [
         time: "2020-09-26",
         area: "New Zealand",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1428,6 +1528,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Japan",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1438,6 +1539,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Japan",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1448,6 +1550,7 @@ var randomData = [
         time: "2020-09-26",
         area: "New Zealand",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1458,6 +1561,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Libya",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1468,6 +1572,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Libya",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1478,6 +1583,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Libya",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1488,6 +1594,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Libya",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1498,6 +1605,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Algeria",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1508,6 +1616,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Algeria",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1518,6 +1627,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Algeria",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1528,6 +1638,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Mali",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1538,6 +1649,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Mali",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1548,6 +1660,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Mali",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1558,6 +1671,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Niger",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1568,6 +1682,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Niger",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1578,6 +1693,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Angola",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1588,6 +1704,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Angola",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1598,6 +1715,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Angola",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1608,6 +1726,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Angola",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1618,6 +1737,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Angola",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1628,6 +1748,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Chad",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1638,6 +1759,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Chad",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1648,6 +1770,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Chad",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1658,6 +1781,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Chad",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1668,6 +1792,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Niger",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1678,6 +1803,7 @@ var randomData = [
         time: "2020-09-26",
         area: "USA",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1688,6 +1814,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Cambodia",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1698,6 +1825,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Cambodia",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1708,6 +1836,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Cambodia",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1718,6 +1847,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Oman",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1728,6 +1858,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Thailand",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1738,6 +1869,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Thailand",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1748,6 +1880,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Myanmar",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1758,6 +1891,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Thailand",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1768,6 +1902,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Oman",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1778,6 +1913,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Cambodia",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1788,6 +1924,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Cambodia",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1798,6 +1935,7 @@ var randomData = [
         time: "2020-09-26",
         area: "USA",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1808,6 +1946,7 @@ var randomData = [
         time: "2020-09-26",
         area: "USA",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1818,6 +1957,7 @@ var randomData = [
         time: "2020-09-26",
         area: "USA",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1828,6 +1968,7 @@ var randomData = [
         time: "2020-09-26",
         area: "USA",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1838,6 +1979,7 @@ var randomData = [
         time: "2020-09-26",
         area: "USA",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1848,6 +1990,7 @@ var randomData = [
         time: "2020-09-26",
         area: "USA",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1858,6 +2001,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Australia",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1868,6 +2012,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Australia",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1878,6 +2023,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Australia",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1888,6 +2034,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Madagascar",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1898,6 +2045,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Madagascar",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1908,6 +2056,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Madagascar",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1918,6 +2067,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Madagascar",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1928,6 +2078,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Madagascar",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1938,6 +2089,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Russia",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1948,6 +2100,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Turkey",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1958,6 +2111,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Turkey",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1968,6 +2122,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Viet Nam",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1978,6 +2133,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Viet Nam",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1988,6 +2144,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Viet Nam",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -1998,6 +2155,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Viet Nam",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -2008,6 +2166,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Viet Nam",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -2018,6 +2177,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Viet Nam",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -2028,6 +2188,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Viet Nam",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -2038,6 +2199,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Viet Nam",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -2048,6 +2210,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Belgium",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -2058,6 +2221,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Spain",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -2068,6 +2232,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Greenland",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -2078,6 +2243,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Greenland",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -2088,6 +2254,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Greenland",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -2098,6 +2265,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Greenland",
         accession: "KU251481",
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -2108,6 +2276,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Spain",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -2118,6 +2287,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Spain",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -2128,6 +2298,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Pakistan",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -2138,6 +2309,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Pakistan",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -2148,6 +2320,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Pakistan",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -2158,6 +2331,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Nepal",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -2168,6 +2342,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Nepal",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -2178,6 +2353,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Nepal",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -2188,6 +2364,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Nepal",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -2198,6 +2375,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Spain",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -2208,6 +2386,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Spain",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -2218,6 +2397,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Spain",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -2228,6 +2408,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Yemen",
         accession: "KU251481", 
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -2238,6 +2419,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Yemen",
         accession: "KU251481", 
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -2248,6 +2430,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Yemen",
         accession: "KU251481", 
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
     {
         genus: "Gammacoronavirus",
@@ -2258,6 +2441,7 @@ var randomData = [
         time: "2020-09-26",
         area: "Spain",
         accession: "KU251481",  
+        virusGenes: "Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds "
     },
 ];
 export {store, geoData, randomData};
