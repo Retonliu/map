@@ -79,7 +79,7 @@ export default {
                 localStorage.setItem("colorsArrOfMap", JSON.stringify(tmpColors));
             }
             const colors = JSON.parse(localStorage.getItem("colorsArrOfMap"));
-            console.log(colors);
+            //console.log(colors);
             let visualMaps = [];
             for (let i = 0, len = this.hosts.length; i < len; i++) {
                 const visualMap = {
