@@ -28,7 +28,7 @@ export default {
                     if (geoCoord) {
                         res.push({
                             value: [...geoCoord, that.data[i].length, that.data[i].tissue, that.data[i].genus, 
-                                    that.data[i].time, that.data[i].area],
+                                    that.data[i].time, that.data[i].area, this.data[i].accession, this.data[i].virusGenes],
                             symbolOffset: [Math.floor((Math.random()*100)+1)+'%', Math.floor((Math.random()*100)+1)+'%'],
                         });
                     }
@@ -51,12 +51,22 @@ export default {
                     roam: true,
                     animation: true,
                     encode: {
-                        value: 2,
-                        tooltip: [2, 3, 4, 5, 6]
+                        tooltip: [2, 3, 4, 5, 6, 7, 8, ]
                     },
                     tooltip: {
-                        //formatter: '',
-                        //trigger: 'item'
+                        formatter: function(params) {
+                            let valueArr = params.value;
+                            //console.log("value[2]:", valueArr[2]);
+                            return `
+                                    length: ${valueArr[2]} <br/>
+                                    tissue: ${valueArr[3]} <br/>
+                                    genus: ${valueArr[4]} <br/>
+                                    time: ${valueArr[5]} <br/> 
+                                    area: ${valueArr[6]} <br/>
+                                    accession: ${valueArr[7]} <br/>
+                                    virusGenes: ${valueArr[8]}
+                                    `
+                        }
                     },
                     animationDuration: function (idx) {
                         return idx * 200;
@@ -73,7 +83,6 @@ export default {
             return seriesArr;
         },
         handleVisualMap() {
-            //that = this,
             if (!localStorage.getItem("colorsArrOfMap")) {
                 const tmpColors = generateColorArr();
                 localStorage.setItem("colorsArrOfMap", JSON.stringify(tmpColors));
@@ -96,31 +105,15 @@ export default {
             return visualMaps;
         },
         initMap: function() {
-            /*console.log(this.data);
-            let that = this;
-            let easingFuncs = {
-                cubicOut: function (k) {
-                    return --k * k * k + 1;
-                }
-            }*/
             let option = {
                 backgroundColor: '#F3F3F3',//'#A2CD5A'
-                tooltip: {
-                    //formatter: (params: , ticket: string, callback: (ticket: string, html: string)) => string,//'a: {a}<br/>c:{c1}',//a是系列名，b是res中每个元素的name属性，c是value属性
-                    trigger: 'item'
-                },
-                /*title: {
-                    text: '毒株检索',
-                    left: 'center',
-                    textStyle: {
-                        fontSize: 30,
-                        color: '#666666'
-                    }
-                },*/
                 label: {
                     show: false,
                     formatter: '{a}',
                     position: 'right',
+                },
+                tooltip: {
+                    trigger: 'item'
                 },
                 geo: {
                     map: 'world',

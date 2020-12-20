@@ -126,7 +126,7 @@ export default {
             this.selectData = res;
         }
     },
-    mounted() {
+    /*mounted() {
         //在这里通过axios引入服务器传来的数据
         //let that = this;
         let urlData = 'http://47.115.90.9:8181/vlog/getAll';
@@ -137,7 +137,7 @@ export default {
                     console.log(response.data.data); //把获得的数据放到this.data里面。这里只是假设
                 }
             }); 
-    }
+    }*/
 }
 </script>
 
