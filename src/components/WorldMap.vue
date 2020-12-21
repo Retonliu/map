@@ -20,15 +20,15 @@ export default {
     methods: {
         convertData(host) {
             let res = [];
-            let that = this;
+
             //console.log(this.data);
             for (let i = 0; i < this.data.length; i++) {
                 if (this.data[i].host === host) {
                     let geoCoord = this.geoCoorMap[this.data[i].area];
                     if (geoCoord) {
                         res.push({
-                            value: [...geoCoord, that.data[i].length, that.data[i].tissue, that.data[i].genus, 
-                                    that.data[i].time, that.data[i].area, this.data[i].accession, this.data[i].virusGenes],
+                            value: [...geoCoord, this.data[i].length, this.data[i].tissue, this.data[i].genus, 
+                                    this.data[i].time, this.data[i].area, this.data[i].accession, this.data[i].virusGenes, this.data[i].host],
                             symbolOffset: [Math.floor((Math.random()*100)+1)+'%', Math.floor((Math.random()*100)+1)+'%'],
                         });
                     }
@@ -51,13 +51,14 @@ export default {
                     roam: true,
                     animation: true,
                     encode: {
-                        tooltip: [2, 3, 4, 5, 6, 7, 8, ]
+                        tooltip: [2, 3, 4, 5, 6, 7, 8]
                     },
                     tooltip: {
                         formatter: function(params) {
                             let valueArr = params.value;
                             //console.log("value[2]:", valueArr[2]);
                             return `
+                                    host: ${valueArr[9]} <br/>
                                     length: ${valueArr[2]} <br/>
                                     tissue: ${valueArr[3]} <br/>
                                     genus: ${valueArr[4]} <br/>
