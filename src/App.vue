@@ -61,6 +61,7 @@ export default {
         }
     },
     computed: {
+        //获取要传给多选框组件的去重后的内容
             getGenus() {
                 const res = new Map();
                 return this.data.filter((arr) => !res.has(arr.genus) && res.set(arr.genus, 1))
@@ -83,6 +84,7 @@ export default {
             }
     },
     methods: {
+        //提示用户输入的accession是否存在
         validateAccession() {
             //console.log(this.ifShow);
             let flag = false;
@@ -100,8 +102,7 @@ export default {
                 
         },
         filterData() {
-            // 对多选框的内容进行过滤得到res4数组
-            //const that = this;
+            // 用户点击自己想要的内容之后，对多选框的内容进行过滤得到res4数组
             let res = this.data.filter((item1) => store.state.genus.some((item2) => item1.genus===item2.genus))
                 .filter((item1) => store.state.host.some((item2) => item1.host === item2.host))
                 .filter((item1) => store.state.species.some((item2) => item1.species === item2.species))
@@ -129,7 +130,7 @@ export default {
     /*mounted() {
         //在这里通过axios引入服务器传来的数据
         //let that = this;
-        let urlData = '/oauth/authorize?client_id=4e224620f16fb142&redirect_uri=http%3A%2F%2F127.0.0.1%3A8181%2Fyibanuser%2Fyibanlogin&state=test&display=';
+        let urlData = ''; //urlData为服务器接口的资源地址
         this.$axios
             .get(urlData) //get请求传入参数
             .then(response => {
@@ -140,6 +141,7 @@ export default {
             .catch(err => {
                 console.log(err);
             })
+            
     }*/
 }
 </script>
