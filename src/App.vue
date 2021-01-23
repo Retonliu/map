@@ -40,7 +40,8 @@
 <script>
 import WorldMap from './components/WorldMap.vue'
 import selectBox from './components/selectBox.vue'
-import { randomData, store } from './data/store.js'
+import { store } from './data/store.js'
+import { allData } from './data/data.js'
 export default {
     name: 'APP',
     components: {
@@ -57,7 +58,8 @@ export default {
             ifShow: false,
             tipMsg: '查无输入accession',
             selectData: [],
-            data: randomData,
+            data: allData,
+            store: store.state
         }
     },
     computed: {
@@ -103,15 +105,18 @@ export default {
         },
         filterData() {
             // 用户点击自己想要的内容之后，对多选框的内容进行过滤得到res4数组
-            let res = this.data.filter((item1) => store.state.genus.some((item2) => item1.genus===item2.genus))
-                .filter((item1) => store.state.host.some((item2) => item1.host === item2.host))
-                .filter((item1) => store.state.species.some((item2) => item1.species === item2.species))
-                .filter((item1) => store.state.tissue.some((item2) => item1.tissue === item2.tissue))
-                .filter((item1) => store.state.area.some((item2) => item1.area === item2.area))
-                .filter((item) => item.accession===this.accession)
+            //let state = this.store;
+            let store = this.store;
+            let res = this.data.filter((item1) => store.genus.some((item2) => item1.genus===item2.genus))
+                .filter((item1) => store.host.some((item2) => item1.host === item2.host))
+                .filter((item1) => store.species.some((item2) => item1.species === item2.species))
+                .filter((item1) => store.tissue.some((item2) => item1.tissue === item2.tissue))
+                .filter((item1) => store.area.some((item2) => item1.area === item2.area))
+                //.filter((item) => item.accession===this.accession)
                 .filter((item) => this.minLen <= item.length && item.length <= this.maxLen),
                 bT = new Date(this.beginTime.replace("-", "/")),
                 eT = new Date(this.endTime.replace("-", "/"));
+            console.log("1" + res);
             res = res.filter(function(item) {
                 const pattern = /\d{4}-\d{2}-\d{2}/g;
                 let curT = null;
@@ -125,9 +130,12 @@ export default {
                 return bT <= cT && cT <= eT;
             });
             this.selectData = res;
+            //console.log(res);
         }
     },
     /*mounted() {
+        console.log(store);
+        console.log(allData);
         //在这里通过axios引入服务器传来的数据
         //let that = this;
         let urlData = ''; //urlData为服务器接口的资源地址
