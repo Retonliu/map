@@ -6,6 +6,7 @@
 let echarts = require('echarts/lib/echarts');
 import { geoData } from '../data/store.js'
 import generateColorArr from '../data/generateColors.js'
+import { iden } from'../data/data.js'
 export default {
     name: 'WorldMap',
     props: ['data', 'hosts'],
@@ -15,12 +16,9 @@ export default {
             geoCoorMap: geoData,
         }
     },
-    computed: {
-    },
     methods: {
         convertData(host) {
             let res = [];
-
             //console.log(this.data);
             for (let i = 0; i < this.data.length; i++) {
                 if (this.data[i].host === host) {
@@ -29,7 +27,7 @@ export default {
                         res.push({
                             value: [...geoCoord, this.data[i].length, this.data[i].tissue, this.data[i].genus, 
                                     this.data[i].time, this.data[i].area, this.data[i].accession, this.data[i].virusGenes, this.data[i].host],
-                            symbolOffset: [Math.floor((Math.random()*100)+1)+'%', Math.floor((Math.random()*100)+1)+'%'],
+                            symbolOffset: [Math.floor((Math.random()*200)+1)+'%', Math.floor((Math.random()*200)+1)+'%'],
                         });
                     }
                 }
@@ -42,16 +40,16 @@ export default {
                 that = this;
             for (const host of this.hosts) {
                 const serie = {
-                    name: host.host,
+                    name: host,
                     coordinateSystem: 'geo',
                     geoIndex: 0,
                     type: "scatter",
-                    data: that.convertData(host.host),
+                    data: that.convertData(host),
                     symbolSize: 20,
                     roam: true,
                     animation: true,
                     encode: {
-                        tooltip: [2, 3, 4, 5, 6, 7, 8]
+                        tooltip: [2, 3, 4, 5, 6, 7]
                     },
                     tooltip: {
                         formatter: function(params) {
@@ -65,7 +63,6 @@ export default {
                                     time: ${valueArr[5]} <br/> 
                                     area: ${valueArr[6]} <br/>
                                     accession: ${valueArr[7]} <br/>
-                                    virusGenes: ${valueArr[8]}
                                     `
                         }
                     },
@@ -88,6 +85,15 @@ export default {
                 const tmpColors = generateColorArr();
                 localStorage.setItem("colorsArrOfMap", JSON.stringify(tmpColors));
             }
+            if (!localStorage.getItem("iden")) {
+                localStorage.setItem("iden", iden);
+            }
+            if (localStorage.getItem("iden") !== iden) {
+                const tmpColors = generateColorArr();
+                console.log(tmpColors);
+                localStorage.setItem("colorsArrOfMap", JSON.stringify(tmpColors));
+                localStorage.setItem("iden", iden);
+            }
             const colors = JSON.parse(localStorage.getItem("colorsArrOfMap"));
             //console.log(colors);
             let visualMaps = [];
@@ -105,7 +111,7 @@ export default {
             }
             return visualMaps;
         },
-        initMap: function() {
+        initMap() {
             let option = {
                 backgroundColor: '#F3F3F3',//'#A2CD5A'
                 label: {
@@ -145,6 +151,7 @@ export default {
     },
     watch: {
         data() {
+            //console.log(this.data);
             let option = this.myChart.getOption();
             this.myChart.clear(option);
             this.initMap();

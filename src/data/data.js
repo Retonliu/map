@@ -1,4 +1,5 @@
-export { allData };
+export { allData, iden };
+var iden = '2';
 var allData = [
     {"area":"Brazil","virusGenes":"Deltacoronavirus B04 RNA-dependent RNA polymerase (RdRp) gene, partial cds","genus":"Deltacoronavirus","species":"Deltacoronavirus B04","host":"Amazona vinacea","length":376.0,"tissue":"feces","time":"2009.0","accession":"KP965434"},
     {"area":"Brazil","virusGenes":"Avian coronavirus isolate CDE77 S1 spike glycoprotein gene, partial cds","genus":"Gammacoronavirus","species":"Avian coronavirus","host":"Amazona vinacea","length":470.0,"tissue":"feces","time":"2013.0","accession":"KP256820"},
